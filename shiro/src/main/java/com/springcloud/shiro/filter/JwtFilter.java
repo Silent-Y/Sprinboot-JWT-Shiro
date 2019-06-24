@@ -98,8 +98,8 @@ public class JwtFilter extends BasicHttpAuthenticationFilter {
 
     /**
      * 对跨域提供支持
-     * @param request
-     * @param response
+     * @param servletRequest
+     * @param servletResponse
      * @return
      * @throws Exception
      */

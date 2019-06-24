@@ -11,11 +11,15 @@ logging:
 #dagasource and jpa setting
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/shiro1?useUnicode=true&characterEncoding=utf-8
+#    公司电脑配置useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/shiro?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+#    url: jdbc:mysql://localhost:3306/shiro?useUnicode=true&characterEncoding=utf-8
     username: root
-    password: root
+    password:
     driverClassName: com.mysql.cj.jdbc.Driver
   jpa:
+#    公司电脑配置
+    database-platform: org.hibernate.dialect.MySQL5Dialect
     hibernate:
       ddlAuto: update
     showSql: true

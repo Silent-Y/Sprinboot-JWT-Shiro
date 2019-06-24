@@ -35,7 +35,6 @@ public class UserController {
                                  @PathVariable(required = true,name = "id") Long id){
 
         logger.info("==================>" + "secretKey:" + applicationYml.getSecretKey() + "<==================");
-
         logger.info("==================>" + httpServletRequest.getRequestURI() + "<==================");
 
         return userService.retrieveUserById(id);

@@ -41,7 +41,8 @@ public class ShiroConfiguration {
          * 非攔截url
          */
         Map<String,String> filterChainDefinitionMap = new LinkedHashMap<>();
-        filterChainDefinitionMap.put("/login/**","anon");
+//        filterChainDefinitionMap.put("/login/**","anon");
+        filterChainDefinitionMap.put("/**","anon");
 
         /**
          * 攔截url
@@ -50,7 +51,8 @@ public class ShiroConfiguration {
         filterMap.put("jwtFilter",new JwtFilter());
         shiroFilterFactoryBean.setFilters(filterMap);
 
-        filterChainDefinitionMap.put("/**","jwtFilter");
+//        filterChainDefinitionMap.put("/**","jwtFilter");
+        filterChainDefinitionMap.put("/123","jwtFilter");
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
         return shiroFilterFactoryBean;
     }
